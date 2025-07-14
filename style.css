@@ -1,0 +1,216 @@
+/* === Base Styles === */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8fafc;
+    color: #22223b;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #22223b;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* === Navbar === */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+}
+
+.nav-links li a {
+    padding: 7px 16px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+    color: #fff;
+    font-weight: 500;
+}
+
+.nav-links li a:hover {
+    background-color: #4361ee;
+    color: #fff;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 26px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/* === Hero Section === */
+.hero {
+    text-align: center;
+    padding: 100px 20px 80px;
+    background: linear-gradient(135deg, #3a86ff 60%, #4361ee 100%);
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 28px;
+    background: linear-gradient(90deg, #ffbe0b, #fb5607);
+    color: #22223b;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: background 0.3s, color 0.3s;
+    box-shadow: 0 2px 8px rgba(251,86,7,0.08);
+}
+
+.cta:hover {
+    background: linear-gradient(90deg, #fb5607, #ffbe0b);
+    color: #fff;
+}
+
+/* === Sections === */
+.skills span, .project-card, .social-links a, .dark-toggle {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #e0e7ff;
+    color: #22223b;
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+    font-weight: 500;
+}
+
+.skills span:hover, .project-card:hover, .social-links a:hover {
+    transform: scale(1.05);
+    background-color: #bdb2ff;
+    color: #3a0ca3;
+}
+
+.project-card {
+    max-width: 320px;
+    background-color: #fff;
+    padding: 18px;
+    box-shadow: 0 2px 12px rgba(58,134,255,0.10);
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #bdb2ff;
+    background: #f8fafc;
+}
+
+form button {
+    padding: 12px 28px;
+    border: none;
+    background: linear-gradient(90deg, #3a86ff, #4361ee);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: linear-gradient(90deg, #4361ee, #3a86ff);
+}
+
+footer {
+    text-align: center;
+    padding: 24px;
+    background-color: #22223b;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/* === Typewriter Effect === */
+.typewriter {
+    border-right: 2px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(20), blink 0.7s step-end infinite;
+    display: inline-block;
+    max-width: 0;
+}
+
+@keyframes typing {
+    from { max-width: 0 }
+    to { max-width: 100% }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* === Dark Mode === */
+.dark-mode {
+    background-color: #22223b;
+    color: #f8fafc;
+}
+
+.dark-mode .navbar {
+    background: linear-gradient(90deg, #3a0ca3 60%, #4361ee 100%);
+}
+
+.dark-mode .skills span,
+.dark-mode .project-card,
+.dark-mode .social-links a {
+    background-color: #3a0ca3;
+    color: #fff;
+}
+
+.dark-toggle {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+    color: #3a86ff;
+    transition: color 0.3s;
+}
+
+.dark-mode .dark-toggle {
+    color: #ffbe0b;
+}
+.dark-toggle:hover {
+    color: #fb5607;
+}
